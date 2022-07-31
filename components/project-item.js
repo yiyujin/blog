@@ -27,13 +27,13 @@ export default function ProjectItem({data}){
 
     return(
         <a href = {data.url}>
-        <div className="card flex flex-col rounded-xl">
+        <div className="card flex flex-col rounded-xl p-8">
             <div className = "imgContainer">
                 <img className="thumbnail" src={imgSrc} width="100%"/>
             </div>
 
         <div className='p-4 flex flex-col'>
-            <p className='text-sm'>{title}</p>
+            <p className='text-sm mb-2'>{title}</p>
             <p className='text-xs my-2'>{date}</p>
 
             <div className='flex mt-2'>

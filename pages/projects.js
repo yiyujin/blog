@@ -12,7 +12,7 @@ export default function Projects({projects}){
     return(
         <div>
             <Layout>
-                <p className='count px-4 py-8'>
+                <p className='count p-4 py-8 flex justify-center'>
                     Total
                     <span className='pl-4 text-orange-600'>{projects.results.length}</span>
                 </p>

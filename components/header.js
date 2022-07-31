@@ -11,23 +11,23 @@ export default function Header(){
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
                 </svg> */}
 
-                <div className="flex flex-col">
-                        <span className="ml-3">Service Designer by Day</span>
-                        <span className="ml-3">Coding Artist by Night</span>
+                <div className="flex flex-col text-center">
+                        <span className="">Service Designer by Day</span>
+                        <span className="">Coding Artist by Night</span>
                     </div>
                 </a>
                 <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                 
                 <Link href="/">
-                    <a className="text-sm mr-5 hover:text-gray-900">Works</a>
+                    <a className="text-sm mx-2 hover:text-gray-900">Works</a>
                 </Link>
 
                 {/* 링크 걸. 해당하는 부분만 바꾸게 하는 Link 기능 */}
                 <Link href="/projects">
-                    <a className="text-sm mr-5 hover:text-gray-900">Blog</a>
+                    <a className="text-sm mx-2 hover:text-gray-900">Blog</a>
                 </Link>
                 
-                <a className="text-sm mr-5 hover:text-gray-900">Contact</a>
+                <a className="text-sm mx-2 hover:text-gray-900">Contact</a>
                 </nav>
                 
                 {/* 버튼 */}

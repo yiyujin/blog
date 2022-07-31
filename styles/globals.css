@@ -23,12 +23,12 @@ p{
 .card{
     /* border: solid 2px black; */
 
-    background-color: rgba(255,255,255,0.08);
+    /* background-color: rgba(255,255,255,0.04); */
 
     border-radius: 16px;
     overflow: hidden;
 
-    @apply transition duration-300 transform hover:scale-105 hover:shadow-lg
+    /* @apply transition duration-300 transform hover:scale-105 hover:shadow-lg */
 }
 
 .imgContainer{
@@ -41,7 +41,7 @@ p{
 
     display: flex;
 
-    background-color: rgba(255,255,255,0.04);
+    /* background-color: rgba(255,255,255,0.04); */
 }
 
 .thumbnail{
