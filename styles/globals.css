@@ -1,26 +1,58 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary{
+    @apply bg-white dark:bg-black
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h1, h2, h3, h4, h5, h6{
+    @apply text-slate-900 dark:text-white
 }
 
-* {
-  box-sizing: border-box;
+a{
+    @apply text-slate-500 hover:text-slate-700 dark:text-white
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+p{
+    @apply text-slate-500 dark:text-slate-400
+}
+
+
+.card{
+    /* border: solid 2px black; */
+
+    background-color: rgba(255,255,255,0.08);
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    @apply transition duration-300 transform border border-gray-300 hover:scale-105 hover:shadow-lg dark:border-gray-200/50
+}
+
+.imgContainer{
+    width:100%;
+    height: 300px;
+    
+    /* border: solid 1px red; */
+
+    overflow: hidden;
+
+    display: flex;
+
+    background-color: rgba(255,255,255,0.04);
+}
+
+.thumbnail{
+    object-fit: contain;
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    /* background-color: black; */
+}
+
+.count{
+    padding:12px;
 }
