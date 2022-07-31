@@ -23,6 +23,8 @@ export default function ProjectItem({data}){
         imgSrc = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8f07ba30-fefd-49a6-a0eb-759ae7f9a65f/Frame_501.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220731T085934Z&X-Amz-Expires=86400&X-Amz-Signature=0d2ad15449b7e3c1316dbc53f4a9c756062d00507c73b13246cc8670ae5f63e1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Frame%2520501.jpg%22&x-id=GetObject"
     }else if(data.icon.type =="external"){
         imgSrc = data.icon.external.url
+    }else if(data.icon.type == "file"){
+        imgSrc = data.icon.file.url
     }
 
     return(

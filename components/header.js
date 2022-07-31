@@ -12,8 +12,8 @@ export default function Header(){
                 </svg> */}
 
                 <div className="flex flex-col text-center">
-                        <span className="">Service Designer by Day</span>
-                        <span className="">Coding Artist by Night</span>
+                        <h1 className="text-2xl">Service Designer by Day</h1>
+                        <span className="text-2xl">Coding Artist by Night</span>
                     </div>
                 </a>
                 <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
