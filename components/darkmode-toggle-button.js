@@ -21,18 +21,18 @@ export default function DarkModeToggleButton(){
                 
                 {/* light */}
                 <div className="visible dark:invisible dark:h-0 dark: w-0 h-6 w-0">
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                 water
                 </span>
                 </div>
 
                 <div className="invisible dark:visible dark:h-6 dark: w-0 h-0 w-0">
-                    <span class="material-symbols-outlined">
+                    <span className="material-symbols-outlined">
                 dark_mode
                 </span>
                 </div>
 
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-2 ml-2" viewBox="0 0 24 24">
+                <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-2 ml-2" viewBox="0 0 24 24">
                     {/* <path d="M5 12h14M12 5l7 7-7 7"></path> */}
                 </svg>
             </button>
