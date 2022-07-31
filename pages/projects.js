@@ -12,7 +12,7 @@ export default function Projects({projects}){
     return(
         <div>
             <Layout>
-                <h1 class="count" className='text-xl px-4 py-8'>
+                <h1 className='count text-xl px-4 py-8'>
                     Total
                     <span className='pl-4 text-lime-200'>{projects.results.length}</span>
                 </h1>

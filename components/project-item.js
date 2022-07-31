@@ -27,9 +27,9 @@ export default function ProjectItem({data}){
 
     return(
         <a href = {data.url}>
-        <div class="card" className="flex flex-col bg-slate-400 rounded-xl">
+        <div className="card flex flex-col bg-slate-400 rounded-xl">
             <div class = "imgContainer">
-                <img class="thumbnail" src={imgSrc} width="100%"/>
+                <img className="thumbnail" src={imgSrc} width="100%"/>
             </div>
 
         <div className='p-4 flex flex-col'>
