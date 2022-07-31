@@ -27,20 +27,20 @@ export default function ProjectItem({data}){
 
     return(
         <a href = {data.url}>
-        <div className="card flex flex-col bg-slate-400 rounded-xl">
+        <div className="card flex flex-col rounded-xl">
             <div className = "imgContainer">
                 <img className="thumbnail" src={imgSrc} width="100%"/>
             </div>
 
         <div className='p-4 flex flex-col'>
-            <h1 className='font-bold text-2xl'>{title}</h1>
-            <p>{date}</p>
+            <p className='text-sm'>{title}</p>
+            <p className='text-xs my-2'>{date}</p>
 
             <div className='flex mt-2'>
-                <h1 className='px-2 py-1 mr-2 rounded-md bg-rose-200 dark:bg-rose-700'>{category}</h1>
+                <p className='text-xs px-2 py-1 mr-2 rounded-md bg-orange-200 dark:bg-orange-600'>{category}</p>
 
                 {tags.map((aTag) => (
-                    <h1 className="px-2 py-1 mr-2 rounded-md bg-lime-200 dark:bg-lime-700" key={aTag.id}>{aTag.name}</h1>
+                    <p className="text-xs px-2 py-1 mr-2 rounded-md bg-slate-200 dark:bg-slate-700" key={aTag.id}>{aTag.name}</p>
                 ))}
             </div>
         </div>
