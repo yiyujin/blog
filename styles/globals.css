@@ -29,7 +29,7 @@ p{
 .card{
     /* border: solid 2px blue; */
 
-    background-color: rgba(255,255,255,0.04);
+    background-color: rgba(255,255,255,0.08);
 
     border-radius: 32px;
     overflow: hidden;
@@ -53,7 +53,7 @@ p{
 
     display: flex;
 
-    background-color: rgba(255,255,255,0.04);
+    background-color: rgba(255,255,255,0.08);
 }
 
 .thumbnail{
