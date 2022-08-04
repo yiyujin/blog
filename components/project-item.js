@@ -24,18 +24,6 @@ export default function ProjectItem({data}){
         "https://pbs.twimg.com/media/DFgrLkaUwAA3UBS.jpg"
     ]
 
-    //category colors
-    const colors = ["#63C97C", "#6F6FED", "#68BACC", "#E96146", "#DA354B", "#F5C344"]
-    let cateColor;
-
-    if(category == "Study"){
-        cateColor = "#63C97C"
-    }else if (category == "Think"){
-        cateColor = "#E96146"
-    }else{
-        cateColor = "#F5C344"
-    }
-
     let imgSrc;
 
     if(data.icon.type == null || data.icon.type == "emoji"){
@@ -45,6 +33,22 @@ export default function ProjectItem({data}){
     }else if(data.icon.type == "file"){
         imgSrc = data.icon.file.url
     }
+
+    let cateColor
+    if(category == "Study"){
+        cateColor = "Study"
+    }else if(category == "Read"){
+        cateColor = "Read"
+    }else if(category == "Watch"){
+        cateColor = "Watch"
+    }else if(category == "Experience"){
+        cateColor = "Experience"
+    }else if(category == "Review"){
+        cateColor = "Review"
+    }else if(category == "Think"){
+        cateColor = "Think"
+    }
+    
 
     return(
         <a href = {data.url}>
@@ -57,11 +61,10 @@ export default function ProjectItem({data}){
                 <p className='text-lg'>{title}</p>
                 <p className='dates text-xs'>{days} · {date}</p>
 
-                <div className='flex mt-2'>
-                    <p className='category text-xs px-2 py-1 mr-2 rounded-md bg-`{$cateColor}`'>{category}</p>
-
+                <div className='tagContainer flex mt-2'>
+                    <p className={cateColor}>{category}</p>
                     {tags.map((aTag) => (
-                        <p className="text-xs px-2 py-1 mr-2 rounded-md bg-slate-200 dark:bg-slate-700" key={aTag.id}>{aTag.name}</p>
+                        <p className="tags" key={aTag.id}>{aTag.name}</p>
                     ))}
                 </div>
             </div>
