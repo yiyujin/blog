@@ -26,7 +26,7 @@ export default function ProjectItem({data}){
 
     let imgSrc;
 
-    if(data.icon.type == null || data.icon.type == "emoji"){
+    if(data.icon == null || data.icon.type == "emoji"){
         imgSrc = whales[Math.floor(Math.random()*whales.length)]
     }else if(data.icon.type =="external"){
         imgSrc = data.icon.external.url
