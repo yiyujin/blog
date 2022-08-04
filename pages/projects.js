@@ -12,10 +12,10 @@ export default function Projects({projects}){
     return(
         <div>
             <Layout>
-                <p className='count p-4 py-8 flex justify-center'>
+                <h1 className='text-2xl font-bold p-4 flex'>
                     Total
-                    <span className='pl-4 text-orange-600'>{projects.results.length}</span>
-                </p>
+                    <span className='pl-2 text-orange-600'>{projects.results.length}</span>
+                </h1>
 
 
 
@@ -50,7 +50,7 @@ export async function getStaticProps() {
         body: JSON.stringify({
             sorts:[
                 {
-                    "property" : "Date",
+                    "property" : "Created",
                     "direction" : "descending"
                 }
             ],

@@ -21,19 +21,25 @@ p{
 
 
 .card{
-    /* border: solid 2px black; */
+    /* border: solid 2px blue; */
 
-    /* background-color: rgba(255,255,255,0.04); */
+    background-color: rgba(255,255,255,0.08);
 
-    border-radius: 16px;
+    border-radius: 32px;
     overflow: hidden;
+
+    padding: 16px;
 
     /* @apply transition duration-300 transform hover:scale-105 hover:shadow-lg */
 }
 
 .imgContainer{
-    width:100%;
-    height: 200px;
+    width:80px;
+    height: 80px;
+
+    border-radius: 32px;
+
+    margin-right: 16px;
     
     /* border: solid 1px red; */
 
@@ -41,19 +47,17 @@ p{
 
     display: flex;
 
-    /* background-color: rgba(255,255,255,0.04); */
+    background-color: rgba(255,255,255,0.08);
 }
 
 .thumbnail{
-    object-fit: contain;
-    max-width: 100%;
-    display: block;
+    object-fit: cover;
+
+    /* center image */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-body{
-    /* background-color: black; */
-}
-
-.count{
-    padding:12px;
+.dates{
+    color: rgba(255,255,255,0.24) !important;
 }

@@ -12,14 +12,25 @@ export default function Header(){
                 </svg> */}
 
                 <div className="flex flex-col text-center">
-                        <h1 className="text-2xl">Service Designer by Day</h1>
-                        <span className="text-2xl">Coding Artist by Night</span>
+                <Link href="">
+                            <div className='flex'>
+                            <h1 className="text-2xl">Service Designer by Day</h1>
+                            <h1 className='text-xl font-thin mt-2'></h1>
+                            </div>
+                        </Link>
+
+                        <Link href="https://creativecoding-njs68vr4o-yiyujin.vercel.app/">
+                            <div className='flex'>
+                            <h1 className="text-2xl">Coding Artist by Night</h1>
+                            <h1 className='text-xs font-thin mt-2'></h1>
+                            </div>
+                        </Link>
                     </div>
                 </a>
                 <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
                 
                 <Link href="/">
-                    <a className="text-sm mx-2 hover:text-gray-900">Works</a>
+                    <a className="text-sm mx-2 hover:text-gray-900">About Me</a>
                 </Link>
 
                 {/* 링크 걸. 해당하는 부분만 바꾸게 하는 Link 기능 */}
@@ -27,7 +38,7 @@ export default function Header(){
                     <a className="text-sm mx-2 hover:text-gray-900">Blog</a>
                 </Link>
                 
-                <a className="text-sm mx-2 hover:text-gray-900">Contact</a>
+                {/* <a className="text-sm mx-2 hover:text-gray-900">Contact</a> */}
                 </nav>
                 
                 {/* 버튼 */}

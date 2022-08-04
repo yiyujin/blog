@@ -6,6 +6,8 @@ export default function ProjectItem({data}){
     const title = data.properties.Name.title[0].plain_text
 
     const date = data.properties.Date.formula.string
+    
+    const days = data.properties.Days.formula.string
 
     const category = data.properties.Category.select.name
 
@@ -16,11 +18,28 @@ export default function ProjectItem({data}){
     //파일이 없으면,
     // const imgSrc = data.icon.emoji || data.icon.external.url
 
+    const whales = [
+        "https://c.files.bbci.co.uk/1178C/production/_114246517_gettyimages-639203462-594x594.jpg",
+        "https://www.imf.org/-/media/Images/IMF/FANDD/article-image/2019/December/chami-index.ashx",
+        "https://pbs.twimg.com/media/DFgrLkaUwAA3UBS.jpg"
+    ]
+
+    //category colors
+    const colors = ["#63C97C", "#6F6FED", "#68BACC", "#E96146", "#DA354B", "#F5C344"]
+    let cateColor;
+
+    if(category == "Study"){
+        cateColor = "#63C97C"
+    }else if (category == "Think"){
+        cateColor = "#E96146"
+    }else{
+        cateColor = "#F5C344"
+    }
 
     let imgSrc;
 
-    if(data.icon.type == "emoji"){
-        imgSrc = "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8f07ba30-fefd-49a6-a0eb-759ae7f9a65f/Frame_501.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220731%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220731T085934Z&X-Amz-Expires=86400&X-Amz-Signature=0d2ad15449b7e3c1316dbc53f4a9c756062d00507c73b13246cc8670ae5f63e1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Frame%2520501.jpg%22&x-id=GetObject"
+    if(data.icon.type == null || data.icon.type == "emoji"){
+        imgSrc = whales[Math.floor(Math.random()*whales.length)]
     }else if(data.icon.type =="external"){
         imgSrc = data.icon.external.url
     }else if(data.icon.type == "file"){
@@ -29,23 +48,23 @@ export default function ProjectItem({data}){
 
     return(
         <a href = {data.url}>
-        <div className="card flex flex-col rounded-xl p-8">
+        <div className="card flex flex-row">
             <div className = "imgContainer">
-                <img className="thumbnail" src={imgSrc} width="100%"/>
+                <img className="thumbnail" src={imgSrc}/>
             </div>
 
-        <div className='p-4 flex flex-col'>
-            <p className='text-sm mb-2'>{title}</p>
-            <p className='text-xs my-2'>{date}</p>
+            <div className='flex flex-col'>
+                <p className='text-lg'>{title}</p>
+                <p className='dates text-xs'>{days} · {date}</p>
 
-            <div className='flex mt-2'>
-                <p className='text-xs px-2 py-1 mr-2 rounded-md bg-orange-200 dark:bg-orange-600'>{category}</p>
+                <div className='flex mt-2'>
+                    <p className='category text-xs px-2 py-1 mr-2 rounded-md bg-`{$cateColor}`'>{category}</p>
 
-                {tags.map((aTag) => (
-                    <p className="text-xs px-2 py-1 mr-2 rounded-md bg-slate-200 dark:bg-slate-700" key={aTag.id}>{aTag.name}</p>
-                ))}
+                    {tags.map((aTag) => (
+                        <p className="text-xs px-2 py-1 mr-2 rounded-md bg-slate-200 dark:bg-slate-700" key={aTag.id}>{aTag.name}</p>
+                    ))}
+                </div>
             </div>
-        </div>
         </div>
         </a>
     )
