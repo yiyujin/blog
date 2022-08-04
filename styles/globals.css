@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 .bg-primary{
-    @apply bg-white dark:bg-black
+    /* @apply bg-white dark:bg-black */
+
+    background-color: black;
 }
 
 h1, h2, h3, h4, h5, h6, p{
@@ -60,8 +62,4 @@ p{
 
 .dates{
     color: rgba(255,255,255,0.24) !important;
-}
-
-.body{
-    background-color: black !important;
 }
