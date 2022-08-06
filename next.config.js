@@ -9,8 +9,6 @@ const nextConfig = {
       'images.unsplash.com',
       's3.us-west-2.amazonaws.com',
       'https://s3.us-west-2.amazonaws.com',
-      'http://s3.us-west-2.amazonaws.com',
-      'https://img1.daumcdn.net/ '
     ],
     format: ['image/png', 'image/webp', 'image/jpeg']
   }

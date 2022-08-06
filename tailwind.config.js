@@ -8,14 +8,6 @@ module.exports = {
   darkMode:'class',
   theme: {
     extend: {},
-    // colors:{
-    //   'green' : '#63C97C',
-    //   'yellow' : '#6F6FED',
-    //   'orange' : '#68BAC',
-    //   'pink' : '#E96146',
-    //   'purple' : '#DA354B',
-    //   'torq' : '#F5C344',
-    // },
   },
   plugins: [],
 }

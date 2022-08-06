@@ -5,12 +5,6 @@ import Hero from '../components/home/hero'
 import Animation from '../components/home/animation'
 
 export default function Home() {
-  let location;
-
-  if (typeof document !== "undefined") {
-    location = document.location;
-  }
-
   return (
     <Layout>
       <Head>

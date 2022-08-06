@@ -63,9 +63,9 @@ export async function getStaticProps() {
       const projects = await res.json()
 
       //가져오기, map으로 형태 변경해주기
-      const projectNames = projects.results.map((aProject) => (
-        aProject.properties.Name.title[0].plain_text
-      ))
+      // const projectNames = projects.results.map((aProject) => (
+      //   aProject.properties.Name.title[0].plain_text
+      // ))
 
     //   console.log(projectNames)
 
