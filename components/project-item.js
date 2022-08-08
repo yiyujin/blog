@@ -51,7 +51,7 @@ export default function ProjectItem({data}){
     
 
     return(
-        <a href ="/items">
+        <a href ={url}>
         <div className="card flex flex-row">
             <div className = "imgContainer">
                 <Image className="thumbnail" src={imgSrc} width="100%" height="100%"/>
