@@ -13,7 +13,7 @@ export default function Projects({projects}){
         <div>
             <Layout>
                 <h1 className='text-2xl font-bold p-4 flex'>
-                    Total2
+                    Total
                     <span className='pl-2 text-orange-600'>{projects.results.length}</span>
                 </h1>
 
